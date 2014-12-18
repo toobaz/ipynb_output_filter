@@ -10,6 +10,6 @@ for sheet in json_in.worksheets:
         if "outputs" in cell:
             cell.outputs = []
         if "prompt_number" in cell:
-            cell.prompt_number = ''
+            del cell["prompt_number"]
 
 write(json_in, sys.stdout, 'json')
