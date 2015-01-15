@@ -12,4 +12,7 @@ for sheet in json_in.worksheets:
         if "prompt_number" in cell:
             del cell["prompt_number"]
 
+if 'signature' in json_in.metadata:
+    json_in.metadata['signature'] = ""
+
 write(json_in, sys.stdout, 'json')
