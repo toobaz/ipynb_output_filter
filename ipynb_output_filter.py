@@ -9,8 +9,9 @@ for sheet in json_in.worksheets:
     for cell in sheet.cells:
         if "outputs" in cell:
             cell.outputs = []
-        if "prompt_number" in cell:
-            del cell["prompt_number"]
+        for field in ("prompt_number", "execution_number"):
+            if field in cell:
+                del cell["prompt_number"]
 
 if 'signature' in json_in.metadata:
     json_in.metadata['signature'] = ""
