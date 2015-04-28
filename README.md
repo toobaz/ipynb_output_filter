@@ -1,5 +1,7 @@
 # ipynb_output_filter
-Script for stripping output from ipython/jupyter scripts
+Script for stripping output from ipython/jupyter scripts.
+
+Originally from http://stackoverflow.com/questions/18734739/using-ipython-notebooks-under-version-control/20844506
 
 ## Usage
 
