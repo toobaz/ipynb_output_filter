@@ -4,6 +4,9 @@ import sys
 
 version = None
 
+reload(sys)  
+sys.setdefaultencoding('utf8')
+
 try:
     # Jupyter
     from jupyter_nbformat import reads, write
