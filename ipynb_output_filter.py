@@ -4,8 +4,9 @@ import sys
 
 version = None
 
-reload(sys)  
-sys.setdefaultencoding('utf8')
+if sys.version[0] == '2':
+    reload(sys)
+    sys.setdefaultencoding('utf8')
 
 try:
     # Jupyter
