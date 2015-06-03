@@ -30,3 +30,17 @@ To disable the output filtering for a specific git repository, simply create ins
 ```
 
 as content. Clearly, in the same way it is possible to apply filtering //only// on specific repo(s).
+
+
+### Use specific version of python
+
+If the version of python to be used (i.e. the one with access to IPython
+libraries) is not located at ``/usr/bin/python``, it can be specified with the
+``filter.dropoutput_ipynb.clean`` setting. For instance under OSX, if there
+is a version of Python installed via homebrew, the following:
+
+```sh
+git config --global filter.dropoutput_ipynb.clean python ~/bin/ipynb_output_filter.py
+```
+
+will use it rather than the system one.
