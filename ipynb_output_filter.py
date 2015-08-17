@@ -14,7 +14,7 @@ try:
 except ImportError:
     try:
         # New IPython
-        from IPython.nbformat import reads, write
+        from nbformat import reads, write
     except ImportError:
         # Old IPython
         from IPython.nbformat.current import reads, write
