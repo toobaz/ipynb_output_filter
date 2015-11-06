@@ -44,3 +44,15 @@ git config --global filter.dropoutput_ipynb.clean python ~/bin/ipynb_output_filt
 ```
 
 will use it rather than the system one.
+
+### Run in given directory
+
+The simplest way to pick up a specific module version (in particular, of the
+``nbformat`` module from iPython/Jupyter, on which this script relies) is to
+have ``ipynb_output_filter`` run from the directory it is located inside.
+
+In order to do so, ``ipynb_output_filter`` supports a ``--rundir`` argument,
+which can be used as follows:
+
+```ipynb_output_filter.py --rundir ~/git_repos/nbconvert
+```

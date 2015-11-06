@@ -2,6 +2,14 @@
 
 import sys
 
+try:
+    runarg_idx = sys.argv.index('--rundir')
+    rundir = sys.argv[runarg_idx+1]
+    import os
+    os.chdir(os.path.expanduser(rundir))
+except ValueError:
+    pass
+
 version = None
 
 if sys.version[0] == '2':
