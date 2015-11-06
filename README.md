@@ -54,5 +54,6 @@ have ``ipynb_output_filter`` run from the directory it is located inside.
 In order to do so, ``ipynb_output_filter`` supports a ``--rundir`` argument,
 which can be used as follows:
 
-```ipynb_output_filter.py --rundir ~/git_repos/nbconvert
+```sh 
+ipynb_output_filter.py --rundir ~/git_repos/nbconvert
 ```
