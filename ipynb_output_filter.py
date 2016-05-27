@@ -54,6 +54,9 @@ for sheet in sheets:
         for field in ("execution_count",):
             if field in cell:
                 cell[field] = None
+    if hasattr(sheet.metadata, "widgets"):
+        sheet.metadata.widgets = {}
+
 
 if 'signature' in json_in.metadata:
     json_in.metadata['signature'] = ""
