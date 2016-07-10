@@ -57,6 +57,8 @@ for sheet in sheets:
     if hasattr(sheet.metadata, "widgets"):
         del sheet.metadata["widgets"]
 
+    if hasattr(sheet.metadata.language_info, "version"):
+        del sheet.metadata.language_info["version"]
 
 if 'signature' in json_in.metadata:
     json_in.metadata['signature'] = ""
