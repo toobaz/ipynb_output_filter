@@ -54,6 +54,12 @@ for sheet in sheets:
         for field in ("execution_count",):
             if field in cell:
                 cell[field] = None
+
+        if "metadata" in cell:
+            for field in ("collapsed", "scrolled"):
+                if field in cell.metadata:
+                    del cell.metadata[field]
+
     if hasattr(sheet.metadata, "widgets"):
         del sheet.metadata["widgets"]
 
