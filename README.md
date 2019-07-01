@@ -43,7 +43,8 @@ is a version of Python installed via homebrew, the following:
 git config --global filter.dropoutput_ipynb.clean python ~/bin/ipynb_output_filter.py
 ```
 
-will use it rather than the system one.
+will use it rather than the system one. Both python2.x and python3.x should be
+supported.
 
 ### Run in given directory
 
