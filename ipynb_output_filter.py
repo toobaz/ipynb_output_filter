@@ -12,10 +12,6 @@ except ValueError:
 
 version = None
 
-if sys.version[0] == '2':
-    reload(sys)
-    sys.setdefaultencoding('utf8')
-
 try:
     # Jupyter
     from jupyter_nbformat import reads, write
