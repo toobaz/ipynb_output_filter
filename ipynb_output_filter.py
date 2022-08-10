@@ -47,7 +47,7 @@ for sheet in sheets:
         for field in ("prompt_number", "execution_number"):
             if field in cell:
                 del cell[field]
-        for field in ("execution_count", "id"):
+        for field in ("execution_count",):
             if field in cell:
                 cell[field] = None
 
